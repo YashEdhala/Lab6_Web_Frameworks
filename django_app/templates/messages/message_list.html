@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message List</title>
+</head>
+<body>
+    <h1>All Messages</h1>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message.text }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No messages have been added yet.</p>
+    {% endif %}
+
+    <a href="/">Go Back Home</a>
+</body>
+</html>
